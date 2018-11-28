@@ -9,5 +9,5 @@ s.platform     = :ios, '9.0'
 s.source       = {:git => 'https://github.com/weiman152/ScrollMenusView.git', :tag => s.version}
 s.source_files = 'ScrollMenusView/**/*'
 s.requires_arc = true
-s.swift_version = '4'
+s.swift_version = '4.0'
 end
