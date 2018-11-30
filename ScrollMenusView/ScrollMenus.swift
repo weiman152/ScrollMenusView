@@ -34,21 +34,21 @@ public struct MenuModel {
 
 public class ScrollMenus: UIView {
     
-    weak var dataSource: ScrollMenusDataSource?
-    weak var delegate: ScrollMenusDelegate?
-    var lineColor: UIColor = #colorLiteral(red: 1, green: 0.5019607843, blue: 0, alpha: 1) {
+    public weak var dataSource: ScrollMenusDataSource?
+    public weak var delegate: ScrollMenusDelegate?
+    public var lineColor: UIColor = #colorLiteral(red: 1, green: 0.5019607843, blue: 0, alpha: 1) {
         didSet {
             line.backgroundColor = lineColor
         }
     }
     /// 菜单文字的颜色
-    var textColor: UIColor = #colorLiteral(red: 0.3725490196, green: 0.3725490196, blue: 0.3725490196, alpha: 1) {
+    public var textColor: UIColor = #colorLiteral(red: 0.3725490196, green: 0.3725490196, blue: 0.3725490196, alpha: 1) {
         didSet {
            menus.textColor = textColor
         }
     }
     /// 选中文字颜色
-    var textSeletedColor: UIColor = #colorLiteral(red: 1, green: 0.5019607843, blue: 0, alpha: 1) {
+    public var textSeletedColor: UIColor = #colorLiteral(red: 1, green: 0.5019607843, blue: 0, alpha: 1) {
         didSet {
            menus.textSeletedColor = textSeletedColor
         }
