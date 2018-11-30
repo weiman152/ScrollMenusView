@@ -8,25 +8,25 @@
 
 import UIKit
 
-protocol ScrollMenusDataSource: NSObjectProtocol {
+public protocol ScrollMenusDataSource: NSObjectProtocol {
     /// 菜单个数
     func menuViewNumberOfItems() -> Int
     /// 菜单的Item
     func menuViewViewForItems(atIndex: Int) -> UIView
 }
 
-protocol ScrollMenusDelegate: NSObjectProtocol {
+public protocol ScrollMenusDelegate: NSObjectProtocol {
     /// 菜单切换了
     func menuDidChange(currentIndex: Int)
 }
 
-struct MenuModel {
+public struct MenuModel {
     let title: String             // 标题文字，一定要有
     let imageNormal: UIImage?     // 标题左侧图片，正常状态，可选
     let imageSelected: UIImage?   // 标题左侧图片，选中状态，可选
 }
 
-class ScrollMenus: UIView {
+public class ScrollMenus: UIView {
     
     weak var dataSource: ScrollMenusDataSource?
     weak var delegate: ScrollMenusDelegate?
