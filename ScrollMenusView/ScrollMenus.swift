@@ -21,9 +21,15 @@ public protocol ScrollMenusDelegate: NSObjectProtocol {
 }
 
 public struct MenuModel {
-    let title: String             // 标题文字，一定要有
-    let imageNormal: UIImage?     // 标题左侧图片，正常状态，可选
-    let imageSelected: UIImage?   // 标题左侧图片，选中状态，可选
+    var title: String             // 标题文字，一定要有
+    var imageNormal: UIImage?     // 标题左侧图片，正常状态，可选
+    var imageSelected: UIImage?   // 标题左侧图片，选中状态，可选
+    
+    public init(title: String, imageNormal: UIImage?, imageSelected: UIImage?) {
+        self.title = title
+        self.imageNormal = imageNormal
+        self.imageSelected = imageSelected
+    }
 }
 
 public class ScrollMenus: UIView {
@@ -56,7 +62,7 @@ public class ScrollMenus: UIView {
     private let collectionViewModel = CollectionViewModel()
     private var lineOriginalX: CGFloat?
     
-    init(titles: [MenuModel], frame: CGRect, menuHeight: CGFloat = 44) {
+    public init(titles: [MenuModel], frame: CGRect, menuHeight: CGFloat = 44) {
         self.titles = titles
         self.menuHeight = menuHeight
         super.init(frame: frame)

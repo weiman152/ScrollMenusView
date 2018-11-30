@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name         = 'ScrollMenusView'
-s.version      = '1.0.2'
+s.version      = '1.0.3'
 s.summary      = '滑动菜单'
 s.homepage     = 'https://github.com/weiman152/ScrollMenusView'
 s.license      = 'MIT'
