@@ -111,6 +111,16 @@ extension ScrollMenus {
     public func change(menu: MenuModel, index: Int) {
         menus.set(menu: menu, index: index)
     }
+    
+    /// 更改菜单纯文本(change menu at index)
+    ///
+    /// - Parameters:
+    ///   - menu: 要替换的菜单(the menu will be set)
+    ///   - index: 要被替换的位置(the index will be set new menu)
+    public func change(title: String, index: Int) {
+        let menu = MenuModel(title: title)
+        change(menu: menu, index: index)
+    }
 }
 
 extension ScrollMenus {
