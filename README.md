@@ -1,10 +1,10 @@
 # ScrollMenusView
-swift4 滑动菜单
->swift4 scroll menus
+>swift4 滑动菜单
+swift4 scroll menus
 
- 1.滑动菜单View，支持滑动，点击切换，不依赖任何三方，纯手工计算。
+ >1.滑动菜单View，支持滑动，点击切换，不依赖任何三方，纯手工计算。
  
- 2.支持cocoa pods
+ >2.支持cocoa pods
  
 platform :ios, '9.0'
 inhibit_all_warnings!
@@ -16,15 +16,15 @@ pod 'ScrollMenusView'
 
 end
 
-3. 支持左图右文的菜单，初始化使用：
+>3. 支持左图右文的菜单，初始化使用：
  
  public init(titles: [MenuModel], frame: CGRect, menuHeight: CGFloat = 44) 
  
-4. 支持纯文字菜单，初始化使用：
+>4. 支持纯文字菜单，初始化使用：
 
  public init(titles: [String], frame: CGRect, menuHeight: CGFloat = 44) 
  
-5. 支持动态修改某个位置上的菜单文字和图片
+>5. 支持动态修改某个位置上的菜单文字和图片
  
     /// 更改菜单(change menu at index)
     
@@ -43,7 +43,7 @@ end
     public func change(title: String, index: Int)
     
 
-使用cocoa pods示例：
+>使用cocoa pods示例：
 
 
 import UIKit
@@ -107,7 +107,7 @@ extension ViewController: ScrollMenusDelegate {
 ![Alt Text](https://github.com/weiman152/ScrollMenusView/blob/master/screenShots/1111.png)
 
 
-不使用cocoa pods，直接导入到项目中，示例：
+>不使用cocoa pods，直接导入到项目中，示例：
 
 import UIKit
 
