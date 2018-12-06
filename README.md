@@ -23,13 +23,18 @@ end
 
  public init(titles: [String], frame: CGRect, menuHeight: CGFloat = 44) 
  
- 5. 支持动态修改某个位置上的菜单文字和图片
+5. 支持动态修改某个位置上的菜单文字和图片
  
     /// 更改菜单(change menu at index)
+    
     ///
+    
     /// - Parameters:
+    
     ///   - menu: 要替换的菜单(the menu will be set)
+    
     ///   - index: 要被替换的位置(the index will be set new menu)
+    
     public func change(menu: MenuModel, index: Int)
     
     或者
