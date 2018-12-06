@@ -1,15 +1,15 @@
 # ScrollMenusView
 >swift4 滑动菜单
 
-swift4 scroll menus
+>swift4 scroll menus
 
  >1.滑动菜单View，支持滑动，点击切换，不依赖任何三方，纯手工计算。
  
- 1. Scroll menu View, support slider, click to change. Don't rely on any sdk. 
+ >1. Scroll menu View, support slider, click to change. Don't rely on any sdk. 
  
  >2.支持cocoa pods
  
- 2. Support cocoa pods
+ >2. Support cocoa pods
  
 platform :ios, '9.0'
 inhibit_all_warnings!
@@ -23,19 +23,19 @@ end
 
 >3. 支持左图右文的菜单，初始化使用：
 
-3. Support menu of left image and right text.
+>3. Support menu of left image and right text.
  
  public init(titles: [MenuModel], frame: CGRect, menuHeight: CGFloat = 44) 
  
 >4. 支持纯文字菜单，初始化使用：
 
-4. Also support only text menus. You can user the below func to init.
+>4. Also support only text menus. You can user the below func to init.
 
  public init(titles: [String], frame: CGRect, menuHeight: CGFloat = 44) 
  
 >5. 支持动态修改某个位置上的菜单文字和图片
 
-5. Support Modify the menu at index .
+>5. Support Modify the menu at index .
  
     /// 更改菜单(change menu at index)
     
@@ -56,7 +56,7 @@ end
 
 >使用cocoa pods示例：
 
-The demo of user cocoa pods to support ScrollMenusView.
+>The demo of user cocoa pods to support ScrollMenusView.
 
 import UIKit
 import ScrollMenusView
