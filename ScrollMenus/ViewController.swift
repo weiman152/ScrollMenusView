@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var menuView: UIView!
     private var menus: [MenuModel] = []
+    private var scrollMenu: ScrollMenus?
     private var childs: [UIViewController] = [FirstViewController.instance(),
                                               SecondViewController.instance(),
                                               ThirdViewController.instance()]
@@ -51,12 +52,20 @@ class ViewController: UIViewController {
                                menuHeight: 44)
         menu.dataSource = self
         menu.delegate = self
-        menu.set(menuIndex: 1)
-        menu.lineColor = #colorLiteral(red: 1, green: 0.5781051517, blue: 0, alpha: 1)
+        menu.set(selected: 1)
+        menu.lineColor = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
         menu.textColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
-        menu.textSeletedColor = #colorLiteral(red: 1, green: 0.5781051517, blue: 0, alpha: 1)
+        menu.textSeletedColor = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
         menuView.addSubview(menu)
+        scrollMenu = menu
     }
+    
+    /// 更改菜单
+    @IBAction func changeMenu(_ sender: Any) {
+        let menu = MenuModel(title: "改变的菜单", imageNormal: nil, imageSelected: nil)
+        scrollMenu?.change(menu: menu, index: 0)
+    }
+    
 }
 
 extension ViewController: ScrollMenusDataSource {

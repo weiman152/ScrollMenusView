@@ -19,18 +19,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7qm-SW-kBh">
-                                <rect key="frame" x="15" y="315" width="345" height="327"/>
+                                <rect key="frame" x="0.0" y="120" width="375" height="547"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="7qm-SW-kBh" secondAttribute="height" multiplier="343:325" id="x4Y-GQ-AP3"/>
-                                </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qTn-e8-KuZ">
+                                <rect key="frame" x="10" y="55" width="62" height="30"/>
+                                <state key="normal" title="更改菜单"/>
+                                <connections>
+                                    <action selector="changeMenu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T6b-sK-CkB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99226218461990356" green="0.85285298249486252" blue="0.95869286269565857" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7qm-SW-kBh" secondAttribute="bottom" constant="25" id="B9j-ap-oYe"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7qm-SW-kBh" secondAttribute="trailing" constant="15" id="GNk-0o-f3N"/>
-                            <constraint firstItem="7qm-SW-kBh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="u8g-Gw-XUQ"/>
+                            <constraint firstAttribute="bottom" secondItem="7qm-SW-kBh" secondAttribute="bottom" id="W9s-7p-8hL"/>
+                            <constraint firstItem="7qm-SW-kBh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="mB2-rp-z8k"/>
+                            <constraint firstItem="7qm-SW-kBh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rhv-Rl-Yh5"/>
+                            <constraint firstItem="qTn-e8-KuZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="ujK-yp-2hz"/>
+                            <constraint firstItem="7qm-SW-kBh" firstAttribute="top" secondItem="qTn-e8-KuZ" secondAttribute="bottom" constant="35" id="v6S-PM-ZRG"/>
+                            <constraint firstAttribute="trailing" secondItem="7qm-SW-kBh" secondAttribute="trailing" id="yC9-io-uHG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

@@ -42,13 +42,11 @@ class MenusView: UIView {
         self.titles = titles
         super.init(frame: frame)
         setup()
-        setupLayout()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
-        setupLayout()
     }
     
     private func setup() {
@@ -64,24 +62,24 @@ class MenusView: UIView {
         }
         
     }
-    
-    private func setupLayout() {
-        
-    }
 
 }
 
 extension MenusView {
     
-    public func set(title: String, index: Int) {
-        
+    func set(menu: MenuModel, index: Int) {
+        guard index < titles.count, index < titleButtons.count else {
+            return
+        }
+        titles.remove(at: index)
+        titles.insert(menu, at: index)
+        let button = titleButtons[index]
+        button.setTitle(menu.title, for: .normal)
+        button.setImage(menu.imageNormal, for: .normal)
+        button.setImage(menu.imageSelected, for: .selected)
     }
     
-    public func reload(titles: [String]) {
-        
-    }
-    
-    public func setSelect(index: Int) {
+    func setSelect(index: Int) {
         guard index < titleButtons.count else {
             return
         }
@@ -91,18 +89,18 @@ extension MenusView {
         }
     }
     
-    public func currentIndex() -> Int {
+    func currentIndex() -> Int {
         return currentSelectIndex
     }
     
     /// 正在选中的菜单的frame
-    public func selectedFrame() -> CGRect {
+    func selectedFrame() -> CGRect {
         let button = titleButtons[currentSelectIndex]
         return button.frame
     }
     
     /// 正在选中的菜单下一个(右边的)frame
-    public func nextMenuFrame() -> CGRect? {
+    func nextMenuFrame() -> CGRect? {
         guard currentSelectIndex < titleButtons.count,
               isLastMenu() == false else {
             return nil
@@ -112,7 +110,7 @@ extension MenusView {
     }
     
     /// 正在选中的菜单上一个(左边的)frame
-    public func previousMenuFrame() -> CGRect? {
+    func previousMenuFrame() -> CGRect? {
         guard currentSelectIndex > 0 else {
             return nil
         }
@@ -121,12 +119,12 @@ extension MenusView {
     }
     
     /// 是否是最后一个菜单
-    public func isLastMenu() -> Bool {
+    func isLastMenu() -> Bool {
         return currentSelectIndex == (titleButtons.count - 1)
     }
     
     /// 获取小横线滑动的距离
-    public func getScrollDistance() -> CGFloat {
+    func getScrollDistance() -> CGFloat {
         guard titleButtons.count > 1 else {
             return 0
         }

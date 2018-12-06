@@ -30,6 +30,10 @@ public struct MenuModel {
         self.imageNormal = imageNormal
         self.imageSelected = imageSelected
     }
+    
+    public init(title: String) {
+        self.title = title
+    }
 }
 
 public class ScrollMenus: UIView {
@@ -69,6 +73,16 @@ public class ScrollMenus: UIView {
         setup()
     }
     
+    public init(titles: [String], frame: CGRect, menuHeight: CGFloat = 44) {
+        self.titles.removeAll()
+        for title in titles {
+            let menu = MenuModel(title: title)
+            self.titles.append(menu)
+        }
+        super.init(frame: frame)
+        setup()
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
@@ -85,8 +99,17 @@ public class ScrollMenus: UIView {
 extension ScrollMenus {
     
     /// 设置当前选中的index
-    public func set(menuIndex: Int) {
+    public func set(selected menuIndex: Int) {
         menuClick(index: menuIndex)
+    }
+    
+    /// 更改菜单(change menu at index)
+    ///
+    /// - Parameters:
+    ///   - menu: 要替换的菜单(the menu will be set)
+    ///   - index: 要被替换的位置(the index will be set new menu)
+    public func change(menu: MenuModel, index: Int) {
+        menus.set(menu: menu, index: index)
     }
 }
 
