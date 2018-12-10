@@ -3,6 +3,9 @@
 
 >swift4 scroll menus
 
+实现思路介绍：
+https://www.jianshu.com/p/3ef5575fb6f7
+
  >1.滑动菜单View，支持滑动，点击切换，不依赖任何三方，纯手工计算。
  
  >1. Scroll menu View, support slider, click to change. Don't rely on any sdk. 
