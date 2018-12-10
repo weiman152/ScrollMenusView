@@ -159,7 +159,6 @@ extension MenusView {
     
     @objc private func buttonAction(button: UIButton) {
         if currentSelectIndex != button.tag {
-            setSelect(index: button.tag)
             delegate?.menuClick(index: button.tag)
         }
     }

@@ -9,8 +9,6 @@
 import UIKit
 
 public protocol ScrollMenusDataSource: NSObjectProtocol {
-    /// 菜单个数
-    func menuViewNumberOfItems() -> Int
     /// 菜单的Item
     func menuViewViewForItems(atIndex: Int) -> UIView
 }
@@ -205,7 +203,7 @@ extension ScrollMenus: CollectionViewModelDelegate {
 extension ScrollMenus: CollectionViewModelDataSource {
     
     func menuViewNumberOfItems() -> Int {
-        return dataSource?.menuViewNumberOfItems() ?? 0
+        return titles.count
     }
     
     func menuViewViewForItems(atIndex: Int) -> UIView {
