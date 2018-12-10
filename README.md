@@ -96,10 +96,6 @@ class ViewController: UIViewController {
 
 extension ViewController: ScrollMenusDataSource {
     
-    func menuViewNumberOfItems() -> Int {
-        return menus.count
-    }
-    
     func menuViewViewForItems(atIndex: Int) -> UIView {
         return UIView()
     }
@@ -184,10 +180,6 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: ScrollMenusDataSource {
-    
-    func menuViewNumberOfItems() -> Int {
-        return menus.count
-    }
     
     func menuViewViewForItems(atIndex: Int) -> UIView {
         guard atIndex < menus.count, atIndex < childs.count else {
